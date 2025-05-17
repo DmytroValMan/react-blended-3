@@ -28,9 +28,17 @@ const Home = () => {
   return (
     <Section>
       <Container>
-        <CountryList countries={countries} />
+        {error ? (
+          <p>There is an error</p>
+        ) : (
+          <>
+            {isLoading && <p>Loading, please, wait...</p>}
+            <CountryList countries={countries} />
+          </>
+        )}
       </Container>
     </Section>
   );
 };
+
 export default Home;

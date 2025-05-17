@@ -32,16 +32,23 @@ const Country = () => {
 
   return (
     <Section>
-      <Container>
-        <GoBackBtn />
-        <div className={css.wrapper}>
-          <h2>{country.countryName}</h2>
-          <img src={country.flag} alt={country.id} width="300"></img>
-          <p>Capital: {country.capital}</p>
-          <p>Population: {country.population?.toLocaleString('uk-UA')}</p>
-          <p>Languages: {country.languages?.join(', ')}</p>
-        </div>
-      </Container>
+      {error ? (
+        <p>There is an error</p>
+      ) : (
+        <Container>
+          <>
+            {isLoading && <p>Loading, please, wait...</p>}
+            <GoBackBtn />
+            <div className={css.wrapper}>
+              <h2>{country.countryName}</h2>
+              <img src={country.flag} alt={country.id} width="300"></img>
+              <p>Capital: {country.capital}</p>
+              <p>Population: {country.population?.toLocaleString('uk-UA')}</p>
+              <p>Languages: {country.languages?.join(', ')}</p>
+            </div>
+          </>
+        </Container>
+      )}
     </Section>
   );
 };

@@ -67,7 +67,12 @@ const SearchCountry = () => {
             <option value="Oceania">Oceania</option>
           </select>
         </form>
-        <CountryList countries={countries} />
+        {isLoading && <p>Loading, please, wait...</p>}
+        {error ? (
+          <p>There is an error</p>
+        ) : (
+          <CountryList countries={countries} />
+        )}
       </Container>
     </Section>
   );
