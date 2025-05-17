@@ -1,0 +1,26 @@
+.list {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.link {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 24px;
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 4px;
+}
+
+.link:hover {
+  color: #0056b3;
+  border-bottom: 2px solid #0056b3;
+}
+.active {
+  color: #0056b3;
+  border-bottom: 2px solid #0056b3;
+}

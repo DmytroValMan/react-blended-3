@@ -1,0 +1,39 @@
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px; /* Відступи між елементами */
+  margin-bottom: 20px; /* Відступ знизу */
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff; /* Синій фон */
+  color: white; /* Білий текст */
+  border: none; /* Без меж */
+  border-radius: 4px; /* Згладжені краї */
+  padding: 8px 12px; /* Внутрішні відступи */
+  cursor: pointer; /* Зміна курсору при наведенні */
+  transition: background-color 0.3s ease; /* Анімація зміни кольору */
+}
+
+.button:hover {
+  background-color: #0056b3; /* Трохи темніший синій при наведенні */
+}
+
+.select {
+  padding: 8px 12px; /* Внутрішні відступи */
+  font-size: 16px; /* Розмір тексту */
+  border: 1px solid #ccc; /* Сірий контур */
+  border-radius: 4px; /* Згладжені краї */
+  background-color: white; /* Білий фон */
+  cursor: pointer; /* Зміна курсору при взаємодії */
+  transition: border-color 0.3s ease; /* Анімація зміни кольору */
+}
+
+.select:focus {
+  border-color: #007bff; /* Синій контур при фокусі */
+  outline: none; /* Забираємо стандартний outline */
+}
